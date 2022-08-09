@@ -134,18 +134,18 @@ def test_blank_input_text():
         (By.XPATH, "//button[contains(.,\'Оставить только гласные\')]").click()
     chrome_driver.find_element(By.XPATH, "//button[contains(.,\'Выделить результат\')]").click()
     sleep(1)
-    res = chrome_driver.find_element('id', 'text_output').text
-    assert res == ''
+    result = chrome_driver.find_element('id', 'text_output').text
+    assert result == ''
     chrome_driver.find_element(By.XPATH, "//button[contains(.,\'Ну и ещё пробелы\')]").click()
     chrome_driver.find_element(By.XPATH, "//button[contains(.,\'Выделить результат\')]").click()
     sleep(1)
-    res = chrome_driver.find_element('id', 'text_output').text
-    assert res == ''
+    result = chrome_driver.find_element('id', 'text_output').text
+    assert result == ''
     chrome_driver.find_element(By.XPATH, "//button[contains(.,\'Оставить ещё и .,-!?\')]").click()
     chrome_driver.find_element(By.XPATH, "//button[contains(.,\'Выделить результат\')]").click()
     sleep(1)
-    res = chrome_driver.find_element('id', 'text_output').text
-    assert res == ''
+    result = chrome_driver.find_element('id', 'text_output').text
+    assert result == ''
 
 
     chrome_driver.close()
